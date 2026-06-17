@@ -209,9 +209,9 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
 <!-- HERO -->
 <section class="hero">
   <div class="hero-tag">Meta · Google · TikTok Ads</div>
-  <h1>Нові клієнти<br>за <i>24 години</i></h1>
+  <h1>Нові клієнти за<br><i>24 години</i>, або повернемо кошти</h1>
   <div class="hero-row">
-    <p class="hero-sub">Запускаємо рекламу, яка приносить заявки. <strong>7 років досвіду, 100+ проєктів.</strong></p>
+    <p class="hero-sub">Запускаємо рекламу, яка приносить прибуток! <strong>7 років досвіду.</strong></p>
     <div class="hero-ctas">
       <button class="cta-main" onclick="openModal()">Отримати консультацію →</button>
       <button class="cta-ghost" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">Дивитись кейси</button>
@@ -312,7 +312,6 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
         <div><div class="cn-v">18 850</div><div class="cn-l">продажів</div></div>
         <div><div class="cn-v">$1.67</div><div class="cn-l">ціна клієнта</div></div>
         <div><div class="cn-v">$31 600</div><div class="cn-l">бюджет</div></div>
-        <div><div class="cn-v">з нуля</div><div class="cn-l">старт</div></div>
       </div>
     </div>
 
@@ -408,9 +407,9 @@ footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-b
         <div class="f-err" id="fn-e">Вкажіть ваше ім'я</div>
       </div>
       <div class="f-row">
-        <label class="f-label" for="fc">Телефон або Instagram</label>
-        <input class="f-in" id="fc" type="text" placeholder="+38 050 000 00 00 або @page">
-        <div class="f-err" id="fc-e">Вкажіть контакт</div>
+        <label class="f-label" for="fc">Номер телефону</label>
+        <input class="f-in" id="fc" type="tel" placeholder="+38 050 000 00 00" autocomplete="tel">
+        <div class="f-err" id="fc-e">Вкажіть правильний номер телефону</div>
       </div>
       <div class="f-row">
         <label class="f-label" for="fb">Ніша / бізнес</label>
@@ -570,8 +569,10 @@ function submit(){
   const c=document.getElementById('fc').value.trim();
   const biz=document.getElementById('fb').value.trim();
   const budget=document.getElementById('fbu').value;
-  err('fn-e',!n);err('fc-e',!c);
-  if(!n||!c)return;
+  const phoneOk=isValidPhone(c);
+  err('fn-e',!n);
+  err('fc-e',!phoneOk);
+  if(!n||!phoneOk)return;
   const btn=document.querySelector('.f-submit');
   sendLead({name:n, phone:c, niche:biz, budget:budget, source:'Форма в кінці сторінки'}, btn);
 }
