@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дякуємо за заявку — Prosto©</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0A0A0A;
+  --ink2:#3D3D3D;
+  --ink3:#8A8A8A;
+  --blue:#1A56FF;
+  --blue-h:#0040EE;
+  --blue-bg:#EEF3FF;
+  --line:#E8E8E8;
+  --bg:#FFFFFF;
+  --bg2:#F7F7F7;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+
+nav{height:60px;display:flex;align-items:center;padding:0 40px;border-bottom:1px solid var(--line)}
+.logo{font-size:17px;font-weight:900;color:var(--ink)}
+.logo b{color:var(--blue)}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;text-align:center}
+.wrap{max-width:560px}
+.check{width:84px;height:84px;border-radius:50%;background:var(--blue-bg);display:flex;align-items:center;justify-content:center;font-size:38px;margin:0 auto 32px;animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+h1{font-size:clamp(32px,5vw,52px);font-weight:900;letter-spacing:-2px;line-height:1.05;margin-bottom:18px}
+h1 i{font-style:italic;color:var(--blue)}
+.sub{font-size:17px;color:var(--ink2);line-height:1.65;margin-bottom:40px}
+.sub strong{color:var(--ink);font-weight:700}
+
+.steps{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:36px;text-align:left}
+.step{display:flex;gap:16px;padding:20px 22px;border-bottom:1px solid var(--line)}
+.step:last-child{border-bottom:none}
+.step-n{font-size:13px;font-weight:900;color:var(--blue);min-width:24px}
+.step-t{font-size:14px;color:var(--ink2);line-height:1.5}
+.step-t strong{color:var(--ink);font-weight:700}
+
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{height:50px;padding:0 28px;border-radius:10px;font:600 15px/1 'Inter',sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:all .15s}
+.btn-primary{background:var(--blue);color:#fff;border:none}
+.btn-primary:hover{background:var(--blue-h);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+footer{padding:24px 40px;text-align:center;font-size:12px;color:var(--ink3);border-top:1px solid var(--line)}
+
+@media(max-width:600px){
+  nav,footer{padding:0 20px}
+  main{padding:40px 20px}
+  .cta-row{flex-direction:column}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Prosto<b>©</b></a>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="check">✅</div>
+    <div class="tag">Заявку отримано</div>
+    <h1>Дякуємо!<br>Ми вже <i>в курсі</i></h1>
+    <p class="sub">Заявка надійшла нашому менеджеру в Telegram.<br><strong>Зв'яжемося протягом 2 годин</strong> у робочий час.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><div class="step-t"><strong>Зателефонуємо</strong> або напишемо на вказаний контакт</div></div>
+      <div class="step"><div class="step-n">02</div><div class="step-t"><strong>Обговоримо</strong> вашу нішу, цілі та бюджет</div></div>
+      <div class="step"><div class="step-n">03</div><div class="step-t"><strong>Запропонуємо</strong> стратегію та терміни запуску</div></div>
+    </div>
+
+    <div class="cta-row">
+      <a href="https://t.me/sachalko" class="btn btn-primary">Написати нам у Telegram →</a>
+      <a href="/" class="btn btn-ghost">На головну</a>
+    </div>
+  </div>
+</main>
+
+<footer>© 2025 Prosto · Meta, Google &amp; TikTok Ads</footer>
+
+</body>
+</html>

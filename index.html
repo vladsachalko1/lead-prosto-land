@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosto© — Нові клієнти за 24 години</title>
+<meta name="description" content="Prosto — рекламна агенція Meta, Google & TikTok Ads. 7 років досвіду, 100+ проєктів, 50+ млн ₴ заробили клієнтам.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#0A0A0A;
+  --ink2:#3D3D3D;
+  --ink3:#8A8A8A;
+  --blue:#1A56FF;
+  --blue-h:#0040EE;
+  --blue-bg:#EEF3FF;
+  --line:#E8E8E8;
+  --bg:#FFFFFF;
+  --bg2:#F7F7F7;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* ── NAV ── */
+nav{position:fixed;inset:0 0 auto;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-size:17px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-.3px}
+.logo b{color:var(--blue)}
+.nav-r{display:flex;align-items:center;gap:28px}
+.nav-r a{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;transition:color .15s}
+.nav-r a:hover{color:var(--ink)}
+.nav-btn{height:36px;padding:0 20px;background:var(--blue);color:#fff;border:none;border-radius:8px;font:600 13px/1 'Inter',sans-serif;cursor:pointer;transition:background .15s,transform .15s;white-space:nowrap}
+.nav-btn:hover{background:var(--blue-h);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:100px 40px 60px;border-bottom:1px solid var(--line)}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:28px}
+.hero-tag::before{content:'';width:24px;height:2px;background:var(--blue);display:inline-block}
+.hero h1{font-size:clamp(52px,9vw,120px);font-weight:900;line-height:.92;letter-spacing:-4px;color:var(--ink);max-width:1000px;margin-bottom:32px}
+.hero h1 i{font-style:italic;color:var(--blue)}
+.hero-row{display:flex;align-items:flex-end;gap:60px;flex-wrap:wrap}
+.hero-sub{font-size:17px;color:var(--ink2);line-height:1.6;max-width:460px}
+.hero-sub strong{color:var(--ink);font-weight:700}
+.hero-ctas{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
+.cta-main{height:52px;padding:0 32px;background:var(--blue);color:#fff;border:none;border-radius:10px;font:700 16px/1 'Inter',sans-serif;cursor:pointer;transition:background .15s,transform .15s;white-space:nowrap}
+.cta-main:hover{background:var(--blue-h);transform:translateY(-2px)}
+.cta-ghost{height:52px;padding:0 32px;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;font:500 15px/1 'Inter',sans-serif;cursor:pointer;transition:border-color .15s,color .15s}
+.cta-ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ── STATS ── */
+.stats{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow-x:auto}
+.stat-item{flex:1;min-width:140px;padding:36px 32px;border-right:1px solid var(--line);text-align:left}
+.stat-item:last-child{border-right:none}
+.stat-val{font-size:clamp(28px,3.5vw,44px);font-weight:900;letter-spacing:-2px;color:var(--ink);line-height:1;white-space:nowrap}
+.stat-val b{color:var(--blue)}
+.stat-lbl{font-size:12px;color:var(--ink3);margin-top:8px;font-weight:500}
+
+/* ── SECTION ── */
+.s{padding:80px 40px;border-bottom:1px solid var(--line)}
+.s-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px;gap:20px}
+.s-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.s-title{font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-2px;line-height:1;color:var(--ink)}
+.s-title-wrap{display:flex;flex-direction:column;gap:8px}
+
+/* ── SERVICES ── */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.svc{padding:32px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s}
+.svc:nth-child(3n){border-right:none}
+.svc:nth-child(4),.svc:nth-child(5),.svc:nth-child(6){border-bottom:none}
+.svc:hover{background:var(--blue-bg)}
+.svc-icon{font-size:26px;margin-bottom:14px;display:block}
+.svc-name{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.svc-desc{font-size:13px;color:var(--ink3);line-height:1.6}
+
+/* ── CASES ── */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.case{border:1px solid var(--line);border-radius:14px;padding:28px;transition:all .2s;cursor:default}
+.case:hover{border-color:var(--blue);box-shadow:0 4px 24px rgba(26,86,255,.08)}
+.case-name{font-size:20px;font-weight:900;letter-spacing:-.5px;color:var(--ink);margin-bottom:3px}
+.case-niche{font-size:12px;color:var(--ink3);margin-bottom:18px}
+.case-dur{display:inline-block;font-size:11px;font-weight:700;color:var(--blue);background:var(--blue-bg);padding:3px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px}
+.case-nums{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cn-v{font-size:18px;font-weight:900;color:var(--blue);letter-spacing:-.5px;line-height:1}
+.cn-l{font-size:11px;color:var(--ink3);margin-top:3px}
+
+/* ── PROCESS ── */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pstep{padding:24px;border:1px solid var(--line);border-radius:12px;transition:border-color .2s}
+.pstep:hover{border-color:var(--blue)}
+.pstep-n{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+.pstep-t{font-size:14px;font-weight:600;color:var(--ink);line-height:1.4}
+
+/* ── WHY ── */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.wi{padding:32px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wi:nth-child(2n){border-right:none}
+.wi:nth-child(3),.wi:nth-child(4){border-bottom:none}
+.wi:hover{background:var(--bg2)}
+.wi-n{font-size:36px;font-weight:900;color:var(--blue);letter-spacing:-1px;margin-bottom:6px}
+.wi-t{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.wi-d{font-size:13px;color:var(--ink3);line-height:1.6}
+
+/* ── FORM ── */
+.form-wrap{max-width:560px}
+.form-title{font-size:clamp(32px,5vw,60px);font-weight:900;letter-spacing:-2.5px;line-height:.95;margin-bottom:10px;color:var(--ink)}
+.form-title i{font-style:italic;color:var(--blue)}
+.form-sub{font-size:15px;color:var(--ink3);margin-bottom:36px;line-height:1.5}
+.f-row{margin-bottom:12px}
+.f-label{font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:6px;display:block}
+.f-in,.f-sel{width:100%;height:48px;padding:0 16px;background:var(--bg2);border:1.5px solid var(--line);border-radius:10px;font:15px/1 'Inter',sans-serif;color:var(--ink);outline:none;transition:border-color .15s;appearance:none;-webkit-appearance:none}
+.f-in:focus,.f-sel:focus{border-color:var(--blue);background:#fff}
+.f-in::placeholder{color:#C0C0C0}
+.f-sel{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238A8A8A' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:var(--bg2);cursor:pointer}
+.f-sel option{background:#fff}
+.f-err{font-size:11px;color:#E53935;margin-top:4px;display:none}
+.f-submit{width:100%;height:52px;background:var(--blue);color:#fff;border:none;border-radius:10px;font:700 16px/1 'Inter',sans-serif;cursor:pointer;transition:background .15s,transform .15s;margin-top:16px}
+.f-submit:hover{background:var(--blue-h);transform:translateY(-1px)}
+.f-note{font-size:11px;color:var(--ink3);text-align:center;margin-top:10px;line-height:1.5}
+.success{display:none;padding:48px 0}
+.s-check{width:64px;height:64px;border-radius:50%;background:var(--blue-bg);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.s-t{font-size:24px;font-weight:900;letter-spacing:-.5px;color:var(--ink);margin-bottom:8px}
+.s-d{font-size:14px;color:var(--ink3);line-height:1.6}
+
+/* ── FOOTER ── */
+footer{padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.f-logo{font-size:15px;font-weight:900;color:var(--ink)}
+.f-logo b{color:var(--blue)}
+.f-copy{font-size:12px;color:var(--ink3)}
+
+/* ── REVEAL ── */
+.r{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.r.in{opacity:1;transform:none}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:#fff;border-radius:20px;padding:48px 44px;width:100%;max-width:480px;margin:16px;position:relative;transform:translateY(20px) scale(.97);transition:transform .25s;box-shadow:0 24px 80px rgba(0,0,0,.14)}
+.modal-overlay.open .modal{transform:none}
+.modal-close{position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;background:var(--bg2);border:none;cursor:pointer;font-size:18px;color:var(--ink3);display:flex;align-items:center;justify-content:center;transition:background .15s}
+.modal-close:hover{background:var(--line)}
+.modal-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.modal-title{font-size:32px;font-weight:900;letter-spacing:-1.5px;line-height:1;color:var(--ink);margin-bottom:6px}
+.modal-title i{font-style:italic;color:var(--blue)}
+.modal-sub{font-size:14px;color:var(--ink3);margin-bottom:28px;line-height:1.5}
+.m-row{margin-bottom:12px}
+.m-label{font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:6px;display:block}
+.m-in{width:100%;height:48px;padding:0 16px;background:var(--bg2);border:1.5px solid var(--line);border-radius:10px;font:15px/1 'Inter',sans-serif;color:var(--ink);outline:none;transition:border-color .15s}
+.m-in:focus{border-color:var(--blue);background:#fff}
+.m-in::placeholder{color:#C0C0C0}
+.m-err{font-size:11px;color:#E53935;margin-top:4px;display:none}
+.m-submit{width:100%;height:52px;background:var(--blue);color:#fff;border:none;border-radius:10px;font:700 16px/1 'Inter',sans-serif;cursor:pointer;transition:background .15s,transform .15s;margin-top:16px}
+.m-submit:hover{background:var(--blue-h);transform:translateY(-1px)}
+.m-note{font-size:11px;color:var(--ink3);text-align:center;margin-top:10px}
+.m-success{display:none;text-align:center;padding:16px 0 8px}
+.m-check{font-size:44px;margin-bottom:14px}
+.m-ok-t{font-size:22px;font-weight:900;letter-spacing:-.5px;color:var(--ink);margin-bottom:6px}
+.m-ok-d{font-size:14px;color:var(--ink3);line-height:1.6}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  .numbar{grid-template-columns:repeat(3,1fr)}
+  .nb:nth-child(3){border-right:none}
+  .nb:nth-child(4){border-top:1px solid var(--line)}
+  .svcs{grid-template-columns:1fr 1fr}
+  .svc:nth-child(2n){border-right:none}
+  .svc:nth-child(5){border-bottom:1px solid var(--line)}
+  .svc:nth-child(5),.svc:nth-child(6){border-bottom:none}
+  .cases{grid-template-columns:1fr 1fr}
+  .proc{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+  .wi{border-right:none !important;border-bottom:1px solid var(--line) !important}
+  .wi:last-child{border-bottom:none !important}
+}
+@media(max-width:600px){
+  nav{padding:0 20px}
+  .nav-r a{display:none}
+  .hero{padding:80px 20px 48px}
+  .hero h1{letter-spacing:-2px}
+  .hero-row{gap:32px}
+  .hero-proof{gap:24px}
+  .numbar{grid-template-columns:repeat(2,1fr)}
+  .nb:nth-child(2n){border-right:none}
+  .nb:nth-child(3){border-top:none}
+  .nb:nth-child(2){border-right:none}
+  .nb:nth-child(3){border-top:1px solid var(--line)}
+  .nb:nth-child(5){border-right:none;border-top:none}
+  .nb:nth-child(4){border-right:1px solid var(--line)}
+  .s{padding:56px 20px}
+  .svcs,.cases,.proc{grid-template-columns:1fr}
+  .svc{border-right:none !important}
+  .case:nth-child(n){border-right:none}
+  footer{padding:24px 20px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Prosto<b>©</b></a>
+  <div class="nav-r">
+    <a href="#services">Послуги</a>
+    <a href="#cases">Кейси</a>
+    <a href="#form">Контакт</a>
+    <button class="nav-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Залишити заявку →</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Meta · Google · TikTok Ads</div>
+  <h1>Нові клієнти<br>за <i>24 години</i></h1>
+  <div class="hero-row">
+    <p class="hero-sub">Запускаємо рекламу, яка приносить заявки. <strong>7 років досвіду, 100+ проєктів.</strong></p>
+    <div class="hero-ctas">
+      <button class="cta-main" onclick="openModal()">Отримати консультацію →</button>
+      <button class="cta-ghost" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">Дивитись кейси</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat-item"><div class="stat-val">7 <b>років</b></div><div class="stat-lbl">досвіду</div></div>
+  <div class="stat-item"><div class="stat-val">100<b>+</b></div><div class="stat-lbl">проєктів</div></div>
+  <div class="stat-item"><div class="stat-val">50 <b>млн ₴</b></div><div class="stat-lbl">заробили клієнтам</div></div>
+  <div class="stat-item"><div class="stat-val"><b>$</b>300<b>k+</b></div><div class="stat-lbl">рекламний бюджет</div></div>
+  <div class="stat-item"><div class="stat-val">7 <b>днів</b></div><div class="stat-lbl">на запуск реклами</div></div>
+</div>
+
+<!-- SERVICES -->
+<section class="s" id="services">
+  <div class="s-head r">
+    <div class="s-title-wrap">
+      <span class="s-label">Послуги</span>
+      <h2 class="s-title">Що ми робимо</h2>
+    </div>
+  </div>
+  <div class="svcs r">
+    <div class="svc">
+      <span class="svc-icon">🎯</span>
+      <div class="svc-name">Meta Ads</div>
+      <div class="svc-desc">Facebook і Instagram. Холодний трафік + ремаркетинг. Найкраще для Instagram-магазинів і послуг.</div>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🔍</span>
+      <div class="svc-name">Google Ads</div>
+      <div class="svc-desc">Пошук і Performance Max. Клієнти, які вже шукають вас прямо зараз.</div>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🎵</span>
+      <div class="svc-name">TikTok Ads</div>
+      <div class="svc-desc">Молода активна аудиторія. Великий охват при низькій ціні ліда.</div>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">📊</span>
+      <div class="svc-name">Аналітика</div>
+      <div class="svc-desc">Щоденний аналіз, тестування гіпотез, масштабування того що дає результат.</div>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">🌐</span>
+      <div class="svc-name">Сайти та лендінги</div>
+      <div class="svc-desc">Конверсійні сайти під рекламний трафік. Готово за 5–10 днів.</div>
+    </div>
+    <div class="svc">
+      <span class="svc-icon">✍️</span>
+      <div class="svc-name">Креативи</div>
+      <div class="svc-desc">Тексти, оффери, банери, відео — все під ключ для запуску реклами.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="s" id="cases">
+  <div class="s-head r">
+    <div class="s-title-wrap">
+      <span class="s-label">Кейси</span>
+      <h2 class="s-title">Реальні цифри</h2>
+    </div>
+  </div>
+  <div class="cases">
+
+    <div class="case r">
+      <div class="case-name">Ela Liza</div>
+      <div class="case-niche">Жіночий одяг · Instagram</div>
+      <div class="case-dur">3 місяці</div>
+      <div class="case-nums">
+        <div><div class="cn-v">2 463 298 ₴</div><div class="cn-l">продажів</div></div>
+        <div><div class="cn-v">2 890</div><div class="cn-l">замовлень</div></div>
+        <div><div class="cn-v">$1.56</div><div class="cn-l">ціна заявки</div></div>
+        <div><div class="cn-v">45,92%</div><div class="cn-l">конверсія</div></div>
+      </div>
+    </div>
+
+    <div class="case r">
+      <div class="case-name">Personage</div>
+      <div class="case-niche">Одяг · Instagram</div>
+      <div class="case-dur">21 місяць</div>
+      <div class="case-nums">
+        <div><div class="cn-v">10,1 млн ₴</div><div class="cn-l">товарообіг</div></div>
+        <div><div class="cn-v">5,6 млн ₴</div><div class="cn-l">маржа</div></div>
+        <div><div class="cn-v">4 587</div><div class="cn-l">продажів</div></div>
+        <div><div class="cn-v">$8.50</div><div class="cn-l">ціна клієнта</div></div>
+      </div>
+    </div>
+
+    <div class="case r">
+      <div class="case-name">Flamingo Druk</div>
+      <div class="case-niche">Фотокниги · Instagram</div>
+      <div class="case-dur">15 місяців</div>
+      <div class="case-nums">
+        <div><div class="cn-v">18 850</div><div class="cn-l">продажів</div></div>
+        <div><div class="cn-v">$1.67</div><div class="cn-l">ціна клієнта</div></div>
+        <div><div class="cn-v">$31 600</div><div class="cn-l">бюджет</div></div>
+        <div><div class="cn-v">з нуля</div><div class="cn-l">старт</div></div>
+      </div>
+    </div>
+
+    <div class="case r">
+      <div class="case-name">Catlashes School</div>
+      <div class="case-niche">Курси нарощення вій · Барселона</div>
+      <div class="case-dur">11 місяців</div>
+      <div class="case-nums">
+        <div><div class="cn-v">€56 500</div><div class="cn-l">заробили</div></div>
+        <div><div class="cn-v">189</div><div class="cn-l">продажів</div></div>
+        <div><div class="cn-v">11,02%</div><div class="cn-l">конверсія</div></div>
+        <div><div class="cn-v">€9 020</div><div class="cn-l">бюджет</div></div>
+      </div>
+    </div>
+
+    <div class="case r">
+      <div class="case-name">Eco Pro Pack</div>
+      <div class="case-niche">Крафтові пакети B2B</div>
+      <div class="case-dur">14 місяців</div>
+      <div class="case-nums">
+        <div><div class="cn-v">4,2 млн ₴</div><div class="cn-l">товарообіг</div></div>
+        <div><div class="cn-v">63,28%</div><div class="cn-l">конверсія</div></div>
+        <div><div class="cn-v">1 900</div><div class="cn-l">продажів</div></div>
+        <div><div class="cn-v">$4.23</div><div class="cn-l">ціна клієнта</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="s" id="process">
+  <div class="s-head r">
+    <div class="s-title-wrap">
+      <span class="s-label">Процес</span>
+      <h2 class="s-title">7 днів до запуску</h2>
+    </div>
+  </div>
+  <div class="proc">
+    <div class="pstep r"><div class="pstep-n">01</div><div class="pstep-t">Брифінг і знайомство з бізнесом</div></div>
+    <div class="pstep r"><div class="pstep-n">02</div><div class="pstep-t">Отримання доступів, аудит кабінету</div></div>
+    <div class="pstep r"><div class="pstep-n">03</div><div class="pstep-t">Аналіз конкурентів і ЦА</div></div>
+    <div class="pstep r"><div class="pstep-n">04</div><div class="pstep-t">Рекламна стратегія і оффери</div></div>
+    <div class="pstep r"><div class="pstep-n">05</div><div class="pstep-t">Запуск тестових кампаній</div></div>
+    <div class="pstep r"><div class="pstep-n">06</div><div class="pstep-t">Аналіз і масштабування</div></div>
+    <div class="pstep r"><div class="pstep-n">07</div><div class="pstep-t">Щоденна звітність + Zoom щотижня</div></div>
+    <div class="pstep r"><div class="pstep-n">08</div><div class="pstep-t">Безперервна оптимізація</div></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="s">
+  <div class="s-head r">
+    <div class="s-title-wrap">
+      <span class="s-label">Чому Prosto</span>
+      <h2 class="s-title">По факту</h2>
+    </div>
+  </div>
+  <div class="why-grid r">
+    <div class="wi">
+      <div class="wi-n">7 днів</div>
+      <div class="wi-t">Від заявки до запуску</div>
+      <div class="wi-d">Без затяжних погоджень. Підписали — запустили.</div>
+    </div>
+    <div class="wi">
+      <div class="wi-n">від 20$</div>
+      <div class="wi-t">Рекламний бюджет на день</div>
+      <div class="wi-d">Бюджет іде напряму в платформи. Ніяких прихованих накруток.</div>
+    </div>
+    <div class="wi">
+      <div class="wi-n">щодня</div>
+      <div class="wi-t">Звіт по заявкам і продажам</div>
+      <div class="wi-d">Заявки, продажі, маржа — все в одному звіті кожного дня.</div>
+    </div>
+    <div class="wi">
+      <div class="wi-n">3+ міс</div>
+      <div class="wi-t">Мінімальний термін співпраці</div>
+      <div class="wi-d">Серйозний результат — за 2–3 місяці. Без ілюзій.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="s" id="form">
+  <div class="form-wrap">
+    <div class="s-label r" style="margin-bottom:16px">Залишити заявку</div>
+    <h2 class="form-title r">Починаємо<br><i>роботу?</i></h2>
+    <p class="form-sub r">Зв'яжемося протягом 2 годин і обговоримо вашу задачу.</p>
+    <div id="form-box" class="r">
+      <div class="f-row">
+        <label class="f-label" for="fn">Ім'я</label>
+        <input class="f-in" id="fn" type="text" placeholder="Іван Петренко" autocomplete="name">
+        <div class="f-err" id="fn-e">Вкажіть ваше ім'я</div>
+      </div>
+      <div class="f-row">
+        <label class="f-label" for="fc">Телефон або Instagram</label>
+        <input class="f-in" id="fc" type="text" placeholder="+38 050 000 00 00 або @page">
+        <div class="f-err" id="fc-e">Вкажіть контакт</div>
+      </div>
+      <div class="f-row">
+        <label class="f-label" for="fb">Ніша / бізнес</label>
+        <input class="f-in" id="fb" type="text" placeholder="Магазин, послуги, курси...">
+      </div>
+      <div class="f-row">
+        <label class="f-label" for="fbu">Рекламний бюджет</label>
+        <select class="f-sel" id="fbu">
+          <option value="">Оберіть бюджет</option>
+          <option>До $500 / міс</option>
+          <option>$500 – $1 000 / міс</option>
+          <option>$1 000 – $3 000 / міс</option>
+          <option>$3 000 – $5 000 / міс</option>
+          <option>Від $5 000 / міс</option>
+        </select>
+      </div>
+      <button class="f-submit" onclick="submit()">Надіслати заявку →</button>
+      <p class="f-note">Пн–Пт 9:30–19:00 · Сб 11:00–14:00 · відповідь за 2 год</p>
+    </div>
+    <div class="success" id="ok">
+      <div class="s-check">✅</div>
+      <div class="s-t">Заявку отримано!</div>
+      <p class="s-d">Зв'яжемося протягом 2 годин.<br>З нами Prosto 💙</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">Prosto<b>©</b></div>
+  <div class="f-copy">© 2025 · Meta, Google & TikTok Ads · 7 років · 100+ проєктів</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal(null)">✕</button>
+    <div id="m-form">
+      <div class="modal-label">Безкоштовна консультація</div>
+      <h2 class="modal-title">Залишіть<br><i>заявку</i></h2>
+      <p class="modal-sub">Зв'яжемося протягом 2 годин і обговоримо вашу задачу.</p>
+      <div class="m-row">
+        <label class="m-label" for="m-name">Ім'я</label>
+        <input class="m-in" id="m-name" type="text" placeholder="Іван Петренко" autocomplete="name">
+        <div class="m-err" id="m-name-e">Вкажіть ваше ім'я</div>
+      </div>
+      <div class="m-row">
+        <label class="m-label" for="m-phone">Номер телефону</label>
+        <input class="m-in" id="m-phone" type="tel" placeholder="+38 050 000 00 00" autocomplete="tel">
+        <div class="m-err" id="m-phone-e">Вкажіть правильний номер телефону</div>
+      </div>
+      <div class="m-row">
+        <label class="m-label" for="m-niche">Яка у вас ніша?</label>
+        <input class="m-in" id="m-niche" type="text" placeholder="Магазин одягу, курси, послуги...">
+      </div>
+      <button class="m-submit" onclick="modalSubmit()">Отримати консультацію →</button>
+      <p class="m-note">Пн–Пт 9:30–19:00 · Сб 11:00–14:00</p>
+    </div>
+    <div class="m-success" id="m-ok">
+      <div class="m-check">✅</div>
+      <div class="m-ok-t">Заявку отримано!</div>
+      <p class="m-ok-d">Зв'яжемося протягом 2 годин.<br>З нами Prosto 💙</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Reveal
+const ro=new IntersectionObserver(es=>{
+  es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*60);ro.unobserve(e.target)}})
+},{threshold:.08});
+document.querySelectorAll('.r').forEach(el=>ro.observe(el));
+
+// Counters — numbar has no data-to anymore, skip gracefully
+const nb=document.querySelector('.numbar');
+let done=false;
+if(nb){
+  new IntersectionObserver(([e])=>{
+    if(!e.isIntersecting||done)return;
+    done=true;
+    document.querySelectorAll('[data-to]').forEach(el=>{
+      const to=+el.dataset.to,suf=el.dataset.suf||'',ftype=el.dataset.fmt||'';
+      const t0=performance.now(),dur=1600;
+      function fmt(n,type){
+        if(type==='k'){if(n>=1000)return Math.round(n/1000).toLocaleString('uk')+' 000';return n.toString()}
+        return n>=1000?n.toLocaleString('uk-UA').replace(/,/g,' '):String(n);
+      }
+      function tick(now){
+        const p=Math.min((now-t0)/dur,1),ease=1-Math.pow(1-p,3);
+        el.textContent=fmt(Math.round(ease*to),ftype)+suf;
+        if(p<1)requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  },{threshold:.3}).observe(nb);
+}
+
+// Modal
+function openModal(){
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>document.getElementById('m-name').focus(),300);
+}
+function closeModal(e){
+  if(e&&e.target!==document.getElementById('modal'))return;
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal(null)});
+
+async function sendLead(payload, btn){
+  const originalText = btn ? btn.textContent : '';
+  if(btn){ btn.disabled = true; btn.textContent = 'Надсилаємо...'; }
+  try{
+    const resp = await fetch('/api/lead', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    const data = await resp.json();
+    if(data.ok){
+      window.location.href = '/thank-you.html';
+    } else {
+      throw new Error(data.error || 'Failed');
+    }
+  } catch(e){
+    if(btn){ btn.disabled = false; btn.textContent = originalText; }
+    alert('Не вдалося відправити заявку. Спробуйте ще раз або напишіть нам у Telegram.');
+  }
+}
+
+function merr(id,show){document.getElementById(id).style.display=show?'block':'none'}
+
+// Перевірка номера телефону: мін. 10 цифр, дозволені +, пробіли, дужки, дефіси
+function isValidPhone(str){
+  const digits = str.replace(/[^\d]/g,'');
+  return digits.length >= 10 && digits.length <= 13 && /^[\d+()\s-]+$/.test(str);
+}
+
+function modalSubmit(){
+  const n=document.getElementById('m-name').value.trim();
+  const p=document.getElementById('m-phone').value.trim();
+  const niche=document.getElementById('m-niche').value.trim();
+  const phoneOk = isValidPhone(p);
+  merr('m-name-e',!n);
+  merr('m-phone-e',!phoneOk);
+  if(!n||!phoneOk)return;
+  const btn=document.querySelector('#m-form .m-submit');
+  sendLead({name:n, phone:p, niche:niche, source:'Модальна форма (hero)'}, btn);
+}
+document.getElementById('m-name').oninput=()=>merr('m-name-e',false);
+document.getElementById('m-phone').oninput=()=>merr('m-phone-e',false);
+
+// Bottom form
+function err(id,show){document.getElementById(id).style.display=show?'block':'none'}
+function submit(){
+  const n=document.getElementById('fn').value.trim();
+  const c=document.getElementById('fc').value.trim();
+  const biz=document.getElementById('fb').value.trim();
+  const budget=document.getElementById('fbu').value;
+  err('fn-e',!n);err('fc-e',!c);
+  if(!n||!c)return;
+  const btn=document.querySelector('.f-submit');
+  sendLead({name:n, phone:c, niche:biz, budget:budget, source:'Форма в кінці сторінки'}, btn);
+}
+document.getElementById('fn').oninput=()=>err('fn-e',false);
+document.getElementById('fc').oninput=()=>err('fc-e',false);
+
+// Nav scroll
+window.addEventListener('scroll',()=>{
+  document.querySelector('nav').classList.toggle('scrolled',window.scrollY>40);
+});
+</script>
+</body>
+</html>
